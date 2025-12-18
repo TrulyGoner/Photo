@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Photo Catalogue
 
-## Getting Started
+Каталог фотографий с поиском, фильтрацией и адаптивной masonry-сеткой.
 
-First, run the development server:
+## Описание
+
+Photo Catalogue — это веб-приложение для просмотра коллекции фотографий с удобным поиском и фильтрацией. Проект построен на Next.js с использованием TypeScript и CSS.
+
+## Основные возможности
+
+-  **Поиск** — поиск по названию, автору и тегам изображений
+- 🎛️ **Фильтры** — фильтрация по ориентации (все, пейзаж, портрет, квадрат) и цветовой гамме
+- 📐 **Masonry-сетка** — адаптивная сетка изображений с поддержкой различных соотношений сторон без растягивания
+- ♾️ **Infinite Scroll** — автоматическая подгрузка изображений при прокрутке страницы
+- 📱 **Адаптивный дизайн** — оптимизация для различных размеров экранов
+
+## Технологии
+
+- **Next.js 16** — React-фреймворк
+- **TypeScript** — типизированный JavaScript
+- **CSS** — стилизация с использованием CSS переменных
+- **React 19** — UI библиотека
+
+## Структура проекта
+
+```
+src/
+  ├── components/     # React компоненты
+  │   ├── Filters.tsx
+  │   ├── Gallery.tsx
+  │   ├── ImageCard.tsx
+  │   └── SearchBar.tsx
+  ├── lib/           # Утилиты и типы
+  │   └── images.ts
+  ├── pages/         # Страницы (Pages Router)
+  │   ├── _app.tsx
+  │   └── index.tsx
+  └── styles/        # Глобальные стили
+      └── globals.css
+```
+
+## Запуск проекта
+
+Установите зависимости:
+
+```bash
+npm install
+```
+
+Запустите сервер разработки:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Другие команды
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Сборка для production
+npm run build
 
-## Learn More
+# Запуск production сборки
+npm start
 
-To learn more about Next.js, take a look at the following resources:
+# Проверка кода линтером
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Деплой
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Самый простой способ задеплоить Next.js приложение — использовать [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) от создателей Next.js.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Подробнее о деплое можно узнать в [документации Next.js](https://nextjs.org/docs/app/building-your-application/deploying).
